@@ -1,0 +1,18 @@
+swing
+
+prozor vs dialog - dialog bude na vrhu
+
+EDT - Event Dispatching Thread
+jedina dretva koja smije bilo sto raditi sa korisnickim suceljem
+to je AWT-EventQueue-0
+
+
+dokumentacija (google this):
+a visual guide to swing components
+a vislual guide to layout managers
+(pogledat sucelje LayoutManager ili LayoutManager2)
+
+
+mvc primjer(i) u swingu:
+JList (view)
+ListModel (model)

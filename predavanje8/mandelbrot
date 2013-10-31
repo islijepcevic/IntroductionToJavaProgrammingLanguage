@@ -1,0 +1,36 @@
+mandelbrotov fraktal:
+
+mandelbrotov skup je skup tocaka C iz kompleksne ravnine za koje iterativno preslikavanje:
+z(n+1)=z(n)^2 + C
+uz z(0) = 0 + 0i
+ne divergira
+
+svojstva:
+mandelbrotov skup je povezan=> ima granicu
+granica Mbrotovog skupa je Mbrotov fraktal
+povrsina Mbrotovog skupa mora biti konacna
+opseg je beskonacan
+
+
+
+(dodavanje paketa:
+stvorit lib folder izvana,
+refresh u eclipsu
+desni klik, build path, add to build path
+)
+
+
+
+pitanja: property
+povezanost - covjeculjci u nicemu
+
+
+fork-join framework - rekurzivno dekomponirait posao na nezavisne manje dijelove
+
+compute() {
+	if (velicinaPosla < treshold) {
+		computeDirect();
+		return;
+	}
+	podijeli u manje poslove i njih posalji na izvodjenje
+}

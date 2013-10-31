@@ -1,0 +1,55 @@
+package hr.fer.zemris.java.tecaj_5;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DohvatZaposlenika {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		List<Zaposlenik> zaposlenici = new ArrayList<Zaposlenik>();
+		Zaposlenik peric = new Zaposlenik("1", "Peric", "Pero", 10000);
+		zaposlenici.add( 0, peric );
+		zaposlenici.add( 0, new Zaposlenik("2", "Agic", "Agata", 15000) );
+		zaposlenici.add( 0, new Zaposlenik("3", "Ivic", "Ivana", 12500) );
+		
+		System.out.println("LISTA:");
+		for (Zaposlenik zap : zaposlenici) {
+			System.out.println( zap );
+		}
+		
+		/*
+		 * metoda add sa prvim argumentom pozicija je lose nazvana metoda
+		 * to je zapavo insert na zadano mjesto
+		 */
+		
+		Zaposlenik neki = new Zaposlenik("1", "Peric", "Pero", 10000);
+		boolean nekiJeUListi = zaposlenici.contains( neki );
+		boolean pericJeUListi = zaposlenici.contains( peric );
+		
+		System.out.println();
+		System.out.println(neki + " je u listi: " + nekiJeUListi);
+		System.out.println(peric + " je u listi: " + pericJeUListi);
+		
+		Class opisnikRazreda = String.class;
+		
+		Class referenca1 = String.class;
+		Class referenca2 = String.class;
+		System.out.println(referenca1 == referenca2);
+		
+		Class referenca3 = "Perica".getClass();
+		Class referenca4= String.class;
+		System.out.println(referenca3 == referenca4);
+		
+		System.out.println("Ime mojeg razreda je: " + referenca1.getCanonicalName());
+		System.out.println("poziv getClass(): " + referenca1.getClass());
+		
+		/*
+		 * pokazuje se da svaki razred ima JEDAN opisnik razreda
+		 */
+	}
+
+}

@@ -1,0 +1,48 @@
+o Naredbi:
+Invoker - bilo tko (gumb)
+invokerposao vidi kroz apstraktno sucelje (ovdje ActionListener)
+
+drugi primjeri narede:
+Runnable:
+    invoker - Thread,
+    command - Runnable,
+    ConcreteCommand - implements Runnable / new Runnable(),
+    klijent - nas main
+Callable:
+    command - Callable
+    invoker - ExecutorService,
+    concrete command - new Callable()
+SwingUtilities
+    invoke - (invoke later)
+    
+
+na slajdu za sucelje Action je kriva metoda getValue()
+treba bit getValue( String key ) 
+(valjda)
+
+SELEKTIRANJE TEKSTA - IDEJE
+
+// ideja
+editor.addKursorPomaknutListener( new KursorPomaknutListener() {
+    public void dogodiloSe() {
+        boolean nestoSelektirano = editor.isNestoSelektirano();
+        if (nestoSelektirano == otprijeSelektirano) return;
+        copyMenuItem.setEnabled( nestoSel );
+        toolbarCopy.setEnabled( nestoSel );
+        // lose - nije nadogradivo bez promjene
+    }
+});
+
+// ideja2 - observer
+neki razred Subjekt - registrira nad editorom kao listener za kursorPomaknut
+njegovo stanje je state nestoSelektirano
+mora dozvolit GUI komponentama da se na njega zakvace kao promatraci
+ova metoda dogodiloSe() zove svim promatracima nestoSelektiranoHasChanged()
+sad novoj GUI komponenti moram samo reci da implementira sucelje Observera (nestoSelektiraneChanged)
+
+
+InputMap - ActionMap
+InputMap 
+
+
+dz:

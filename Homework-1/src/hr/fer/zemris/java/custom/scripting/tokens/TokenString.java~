@@ -1,0 +1,36 @@
+package hr.fer.zemris.java.custom.scripting.tokens;
+
+/**
+ * string token
+ * @author ivan
+ *
+ */
+public class TokenString extends Token {
+
+    private String value;
+
+    /**
+     * string token constructor
+     * @param value string token value
+     */
+    public TokenString( String value ) {
+        this.value = value;
+    }
+
+    /**
+     * text representation of the token
+     * @return value
+     */
+    public String asText() {
+        return vlaue;
+    }
+
+    /**
+     * getter for value
+     * @return value
+     */
+    public String getValue() {
+        return value;
+    }
+
+}

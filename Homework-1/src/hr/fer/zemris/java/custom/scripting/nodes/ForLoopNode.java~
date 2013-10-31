@@ -1,0 +1,78 @@
+package hr.fer.zemris.java.custom.scripting.nodes;
+
+import hr.fer.zemris.java.custom.scripting.tokens.*;
+
+/**
+ * node representing a single for-loop construct
+ * @author ivan
+ *
+ */
+public class ForLoopNode extends Node {
+
+    private TokenVariable variable;
+    private Token startExpression;
+    private Token endExpression;
+    private Token stepExpression;
+
+    /**
+     * constructor for the for loop node
+     * @param variable for loop iteration variable
+     * @param startExpression starting expression
+     * @param endExpression ending expression
+     */
+    public ForLoopNode( TokenVariable variable, Token startExpression,
+                        Token endExpression ) {
+        this.variable = variable;
+        this.startExpression = startExpression;
+        this.endExpression = endExpression;
+        this.stepExpression = Token();
+    }
+
+    /**
+     * constructor for the for loop node
+     * @param variable for loop iteration variable
+     * @param startExpression starting expression
+     * @param endExpression ending expression
+     * @param stepExpression step value
+     */
+    public ForLoopNode( TokenVariable variable, Token startExpression,
+                        Token endExpression, Token stepExpression ) {
+        this.variable = variable;
+        this.startExpression = startExpression;
+        this.endExpression = endExpression;
+        this.stepExpression = stepExpression;
+    }
+    
+    /**
+     * getter for iteration variable
+     * @return variable
+     */
+    public TokenVariable getVariable() {
+        return variable;
+    }
+    
+    /**
+     * getter for starting for-loop expression
+     * @return start expression
+     */
+    public Token getStartExpression() {
+        return startExpression;
+    }
+    
+    /**
+     * getter for ending for-loop expression
+     * @return end expression
+     */
+    public Token getEndExpression() {
+        return endExpression;
+    }
+    
+    /**
+     * getter for step in the for loop
+     * @return step expression
+     */
+    public Token getStepExpression() {
+        return stepExpression;
+    }
+
+}

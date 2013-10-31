@@ -1,0 +1,29 @@
+package hr.fer.zemris.java.custom.scripting.parser;
+
+/**
+ * Exception to throw when end of for loop is encountered
+ * @author ivan
+ *
+ */
+public class EndLoopException extends RuntimeException {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+     * default constructor
+     */
+    public EndLoopException() {
+    }
+
+    /**
+     * constructor with message
+     * @param message error message
+     */
+    public EndLoopException( String message ) {
+        super(message);
+    }
+
+}
